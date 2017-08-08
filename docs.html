@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Docs | Kite AI</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body style="height:100%" class="orange-pink-blob">
+  <nav class="navbar navbar-toggleable-md navbar-light fixed-top" style="background-color: white;border-bottom:1px solid #DFDFDF;width:100%">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.html" style="font-size:28px;"><span style="color:#468EE5; font-weight:bolder;letter-spacing:1px">kite</span><span style="color:#3C4248;font-weight:bolder;letter-spacing:1px">AI</span></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link">Documentation</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign up</a>
+        </li>
+    </div>
+  </nav>
+  <div class="container page-header" style="margin-top:100px;margin-bottom:30px;">
+    <h2 class="subheader">Documentation</h2>
+  </div>
+  <div class="container content-section" style="margin-top:30px;margin-bottom:30px;">
+    <h2 class="section-header">Index</h2>
+    <ul>
+      <li><a href="#quick-start">Quick Start</a>
+        <ul>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#creating-an-api-key">Creating an API key</a></li>
+          <li><a href="#your-first-call">Your first call</a></li>
+          <li><a href="#next-steps">Next steps</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Guides</a>
+        <ul>
+          <li><a href="#">A simple Python app</a></li>
+          <li><a href="#">Being proactive with jQuery</a></li>
+        </ul>
+      </li>
+      <li><a href="#">API</a>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">/predict</a></li>
+          <li><a href="#">/abuse</a></li>
+          <li><a href="#">/features</a></li>
+          <li><a href="#">/sentiment</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+  </div>
+  <div class="container content-section" style="margin-top:30px;margin-bottom:30px;">
+    <h2 class="section-header" id="quick-start">Quick Start</h2>
+    <ul>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#creating-an-api-key">Creating an API key</a></li>
+      <li><a href="#your-first-call">Your first call</a></li>
+      <li><a href="#next-steps">Next steps</a></li>
+    </ul>
+
+    <h2 class="subsection-header" id="installation">Installation</h2>
+    <p>To call a Rest API in your project, you'll need to install a library that can make <code class="inline-code">GET</code> and <code class="inline-code">POST</code> requests. For this guide, we'll use unirest, a popular library for Rest APIs because of it's support for multiple languages. To install unirest for Python, it's as easy as using <code class="inline-code">pip</code>.</p>
+    <p class="code">$ pip install unirest</p>
+    <p>Visit <a href="http://unirest.io/">http://unirest.io/</a> on how to install this for other languages.</p>
+    <p>If you're not sure which language you're going to use yet, we recommend <a href="#">Postman</a>, a downloadable app that makes it easy to make calls to APIs. It's great for testing your keys and experimenting with different endpoints.</p>
+    <p>Additionally, if you're familiar with the command line, you can use <code class="inline-code">curl</code>.
+    <h2 class="subsection-header" id="creating-an-api-key">Creating an API key</h2>
+    <p>1. Create an account on <a href="#">https://developer.kiteai.com</a>, and create a new app. We'll call this app "My first app." You can leave the description blank.</p>
+    <p><img src="MyFirstApp-1.png" width=100% style="box-shadow:0px 2px 4px 0px #C1C1C1"></p>
+    <p>2. After creating My First App, click on the app in the Apps Dashboard to enter it's details, and click the API Key field to reveal the key.</p>
+    <p><img src="MyFirstApp-2.png" width=100% style="box-shadow:0px 2px 4px 0px #C1C1C1"></p>
+
+    <h2 class="subsection-header" id="your-first-call">Your first call</h2>
+    <p>After setting up your environment and creating your first app, you're ready to make your fisrt call! We'll use the three methods above to show you how to make a call.</p>
+    <p>Python using unirest:</p>
+    <p class="code">$ python<br>>>> import unirest<br>>>> response = unirest.get("https://api.kiteai.com/predict?phrase=Testing out my first app!",<br>headers={<br>&#9;"x-api-key": "<span class="inline-code">my-first-app-key</span>",<br>&#9;"Accept": "application/json"<br>})<br>>>> print(response.body)</p>
+    <p>To use Postman, change the method type to <code class="inline-code">POST</code> and add a header called <code class="inline-code">x-api-key</code> with your API key as the value.</p>
+    <p><img src="postman.png" width=100% style="box-shadow:0px 2px 4px 0px #C1C1C1"></p>
+    <p>Using <code class="inline-code">curl</code></p>
+    <p class="code">$ curl --get --include 'https://api.kiteai.com/predict?phrase=Testing out my first app!' -H 'x-api-key: <span class="inline-code">my-first-app-key</span>' -H 'Accept: application/json'</p>
+
+    <h2 class="subsection-header" id="next-steps">Next Steps</h2>
+    <p>Now that you know how to set up your environment, create an app, copy your API key, and make your first call, you can do anything! Take a look at the <a href="#">guides</a> for a more in depth tutorial on adding Kite AI to your app, or check out some of our bigger projects and <a href="#">case studies</a> for inspiration for your next big idea.</p>
+    <p>Working on something impactful you'd like others to know about? <a href="#">Let us know</a>!</p>
+  </div>
+</body>
+</html>

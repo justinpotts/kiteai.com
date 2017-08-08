@@ -6,11 +6,34 @@ h1 {
   line-height:1.25;
 }
 
+.nav-item .active {
+  color: #3C4248;
+}
+
 .subheader {
   font-size:36px;
   color:#3C4248;
   font-weight:bolder;
   letter-spacing:1px;
+}
+
+.section-header {
+  font-size:24px;
+  font-weight:bolder;
+  color:#3C4248;
+}
+
+.subsection-header {
+  font-size:18px;
+  font-weight:bolder;
+  color:#3C4248;
+}
+
+.inline-code {
+  font-size:16px;
+  color: #FF6A73;
+  font-weight:400;
+  font-family: Courier;
 }
 
 .subtext {
@@ -43,9 +66,27 @@ h1 {
   color: #9A9A9A;
 }
 
+.code {
+  font-family: Courier;
+  font-size:16px;
+  background-color:#414B56;
+  border-radius:4px;
+  width:100%;
+  color:white;
+  padding-left:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
 .blue-green-blob {
   background-image: url("blue-green-blob.png");
   background-repeat: no-repeat;
+}
+
+.orange-pink-blob {
+  background-image: url("orange-pink-blobs.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .blue-block {
@@ -98,7 +139,7 @@ h1 {
 
 .btn-light-blue {
   background-color: #ACD2FF;
-  border-bottom: 3px solid #8CB9EF;
+  border-bottom: 3px solid #ACD2FF;
   min-width:120px;
   height:50px;
   margin-top:10px;
@@ -110,8 +151,8 @@ h1 {
 }
 
 .btn-light-blue:hover {
-  background-color:#8CB9EF;
-  border-bottom: 3px solid #6CA4E6;
+  background-color:#ACD2FF;
+  border-bottom: 3px solid #99C6FD;
 }
 
 .vertical-center {
