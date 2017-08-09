@@ -21,12 +21,14 @@ h1 {
   font-size:24px;
   font-weight:bolder;
   color:#3C4248;
+  letter-spacing: 1.5px;
 }
 
 .subsection-header {
   font-size:18px;
   font-weight:bolder;
   color:#3C4248;
+  letter-spacing: 1.5px;
 }
 
 .inline-code {
@@ -43,6 +45,10 @@ h1 {
   line-height:1.75;
 }
 
+.muted {
+  color: #C3C3C3;
+}
+
 .footer-header {
   font-size:18px;
   color:#5E5E5E;
@@ -55,8 +61,7 @@ h1 {
 }
 
 .footer-item a {
-  font-size:18px;
-  color:#5E5E5E;
+  font-size:16px;
   font-weight:400;
 }
 
